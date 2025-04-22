@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import Image from 'react-bootstrap/Image'
 import Col from "react-bootstrap/Col"; 
 import Row from "react-bootstrap/Row";
-import Button from "react-bootstrap/Button"
 import Plot from 'react-plotly.js';
 
 import { client } from "../sanity/client";
