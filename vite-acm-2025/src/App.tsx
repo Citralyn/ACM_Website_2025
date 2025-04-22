@@ -1,23 +1,30 @@
-/* TESTING */
-import { useState, useEffect } from 'react';
 
 
-import { client } from "./sanity/client";
+import HomePage from "./pages/HomePage";
+import MyNav from "./components/navbar.tsx"
+import Board from "./pages/Board.tsx"
+import { Routes, Route } from "react-router";
 
 export default function App() {
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    client
-      .fetch(`*[_type == "post"]`)
-      .then((data) => setPosts(data))
-      .catch(console.error);
-  }, []);
 
 
   return (
+    <Routes>
+    <Route path="/" element={<MyNav />}>
+      <Route index element={<HomePage/>}></Route>
+      <Route path="board" element={<Board/>}/>
+    </Route>
+    </Routes>
+
+  );
+}
+
+
+/*
+
     <main className="container mx-auto min-h-screen max-w-3xl p-8">
       <h1 className="text-4xl font-bold mb-8">Posts</h1>
+      <Button>aslfjd</Button>
       <ul className="flex flex-col gap-y-4">
         {posts.map((post: any) => (
           <li className="hover:underline" key={post._id}>
@@ -27,5 +34,5 @@ export default function App() {
         ))}
       </ul>
     </main>
-  );
-}
+
+  */

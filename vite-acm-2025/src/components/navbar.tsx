@@ -10,12 +10,14 @@ function BasicExample() {
     <div>
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="#">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand href="#">ACM @ UCI</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#strange">#strange works</Nav.Link>
-            <Nav.Link href="#link">sdfsd</Nav.Link>
+            <Nav.Link href="#learn">Learn</Nav.Link>
+            <Nav.Link href="#practice">Practice</Nav.Link>
+            <Nav.Link href="#compete">Compete</Nav.Link>
+            <Nav.Link href="#board">Board</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">

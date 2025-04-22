@@ -1,3 +1,6 @@
 import {postType} from "./postType";
 
-export const schemaTypes = [postType]
+import boardMember from './boardMember'
+import position from './position'
+
+export const schemaTypes = [postType, boardMember, position]
