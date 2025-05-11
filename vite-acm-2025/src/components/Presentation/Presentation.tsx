@@ -1,7 +1,13 @@
 import Card from "react-bootstrap/Card";
 import styles from "./Presentation.module.scss";
 
-export default function Presentation({ title, url }) {
+
+interface PresentationProps {
+  title: string;
+  url: string;
+}
+
+const Presentation: React.FC<PresentationProps> = ({ title, url }) => {
     return (
         <Card className={styles.presentation + " mx-4 my-3"}>
             <a href={url}>
@@ -10,3 +16,5 @@ export default function Presentation({ title, url }) {
         </Card>
     );
 }
+
+export default Presentation;
