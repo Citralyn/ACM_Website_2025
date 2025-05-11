@@ -1,0 +1,20 @@
+.FRONT_PAGE {
+  /* Ensures the background gradient always covers the full scrollable area */
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(180deg, #fff176 0%, #16447e 100%);
+  position: relative;
+}
+
+/* Optional: Add any custom styles for HomePage sections here */
+
+@media (max-width: 768px) {
+  .ACM_LOGO {
+    width: 80% !important;
+    max-width: 220px !important;
+  }
+  .ACM_DESC, .ACM_ABOUT {
+    font-size: 1rem;
+    padding: 1rem 0.5rem;
+  }
+}

@@ -1,7 +1,8 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import discordLogo from '/discord-icon.svg';
+import githubLogo from '/github_svg.svg';
 
 import { Outlet } from "react-router";
 
@@ -10,25 +11,35 @@ function BasicExample() {
     <div>
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="#">ACM @ UCI</Navbar.Brand>
+        <Navbar.Brand href="#" className="d-flex align-items-center">
+  <img
+    src="acm_logo.svg"
+    alt="ACM Logo"
+    style={{ height: '10vh', marginRight: '10px', verticalAlign: 'middle' }}
+  />
+  ACM @ UCI
+</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="ms-auto">
             <Nav.Link href="#learn">Learn</Nav.Link>
             <Nav.Link href="#practice">Practice</Nav.Link>
             <Nav.Link href="#compete">Compete</Nav.Link>
             <Nav.Link href="#board">Board</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
+            <Nav.Link target="_blank" href="https://discord.gg/MCtKPxC">
+                <img
+                    src={discordLogo}
+                    alt="ACM@UCI Discord server invite"
+                    width="20"
+                />
+            </Nav.Link>
+            <Nav.Link target="_blank" href="https://github.com/ACM-UCI/">
+                <img
+                    src={githubLogo}
+                    alt="ACM@UCI GitHub"
+                    width="20"
+                />
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

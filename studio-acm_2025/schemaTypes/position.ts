@@ -5,6 +5,7 @@ enum DirectorCategories {
   VP = 'Vice President',
   Director = 'Director',
   Intern = 'Intern',
+  Advisor = 'Advisor',
 }
 
 export default defineType({
@@ -33,6 +34,7 @@ export default defineType({
           },
           {title: DirectorCategories.Director, value: DirectorCategories.Director.toLowerCase()},
           {title: DirectorCategories.Intern, value: DirectorCategories.Intern.toLowerCase()},
+          {title: DirectorCategories.Advisor, value: DirectorCategories.Advisor.toLowerCase()}
         ],
       },
       validation: (Rule) => Rule.required(),

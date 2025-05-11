@@ -1,0 +1,72 @@
+$color-map: (
+  red: #e57373,     // soft red (tinted)
+  green: #81c784,   // soft green (muted minty green)
+  blue: #64b5f6,    // soft blue (sky blue tint)
+  yellow: #fff176,  // soft yellow (pale sunshine)
+  purple: #b39ddb,  // soft purple (lavender-ish)
+  orange: #ffb74d,  // soft orange (light amber)
+  pink: #f48fb1,    // soft pink (rosy tint)
+  gray: #bdbdbd     // lighter neutral gray
+);
+
+
+@each $name, $color in $color-map {
+    .bg-color-#{$name} {
+      background-color: $color;
+    }
+    .txt-color-#{$name} {
+        color: $color;
+    }
+}
+
+.extraSection {
+    width: 100vw;
+    height: 35vh;
+    text-align: center;
+    top: 100%;
+    z-index: 1;
+    color: white;
+}
+
+.extraContent {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5vw;
+    border: 2px solid black;
+}
+
+.extraContent:hover {
+    border-color: yellow;
+    
+}
+.extraContent:hover > .specialExtra{
+    display: block;
+}
+
+.specialExtra {
+    display: none;
+}
+
+/* Default styles for large screen (this will show large screen content by default) */
+.large-screen {
+  display: block;  /* or whatever you want for large screens */
+}
+
+/* Default: hide small screen content */
+.small-screen {
+  display: none;
+}
+
+/* For small screens, hide large screen content */
+@media (max-width: 768px) {
+  .large-screen {
+    display: none;
+  }
+
+  .small-screen {
+    display: block;
+  }
+}
